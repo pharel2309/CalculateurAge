@@ -9,13 +9,13 @@
             Padding="20"
             Spacing="12">
             <Label Text="Nom" FontSize="16" />
-            <Entry x:Name="entryNom" Placeholder="Votre nom" />
+            <Entry Text="{Binding Nom, Mode=TwoWay}" Placeholder="Votre nom" />
 
             <Label Text="Date de naissance" FontSize="10" />
-            <DatePicker x:Name="pickerDate" />
+            <DatePicker Date="{Binding DateNaissance}" />
 
-            <Button x:Name="btnCalculer"  Clicked="OnCalculerClicked"  />
-            <Label x:Name="lblResultat" FontSize="20" IsVisible="False" />
+            <Button  Text="Calculer" Command="{Binding CalculerCommand}"  />
+            <Label Text="{Binding Resultat}" FontSize="20" IsVisible="{Binding ResultatVisible}" />
         </VerticalStackLayout>
     </ScrollView>
 
