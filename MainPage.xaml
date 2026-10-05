@@ -12,10 +12,15 @@
             <Entry Text="{Binding Nom, Mode=TwoWay}" Placeholder="Votre nom" />
 
             <Label Text="Date de naissance" FontSize="10" />
-            <DatePicker Date="{Binding DateNaissance}" />
+            <DatePicker Date="{Binding DateNaissance}" MaximumDate="{Binding DateMax}" />
 
             <Button  Text="Calculer" Command="{Binding CalculerCommand}"  />
+            <Button  Text="Effacer" Command="{Binding EffacerCommand}" />
+            <Label Text="{Binding Erreur}" TextColor="Red" IsVisible="{Binding ErreurVisible}" />
             <Label Text="{Binding Resultat}" FontSize="20" IsVisible="{Binding ResultatVisible}" />
+            <Label Text="{Binding Age, StringFormat='{0} an(s)'}" IsVisible="{Binding ResultatVisible}" />
+            <Label Text="{Binding Message}" FontSize="16" IsVisible="{Binding ResultatVisible}" />
+            <Label Text="{Binding JoursAvantAnniversaire, StringFormat='dans {0} jour(s)'}" IsVisible="{Binding ResultatVisible}" />
         </VerticalStackLayout>
     </ScrollView>
 

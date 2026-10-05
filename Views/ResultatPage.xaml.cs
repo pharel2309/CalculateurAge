@@ -10,13 +10,6 @@ public partial class ResultatPage : ContentPage
 
 	public ResultatPage() =>
 		InitializeComponent();
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        lblMessage.Text = $"{Nom}, vous avez {Age} ans.";
-    }
-
 	private async void onRetourClicked(object s, EventArgs e) =>
         await Shell.Current.GoToAsync("..");
     

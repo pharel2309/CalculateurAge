@@ -4,7 +4,9 @@
              x:Class="CalculateurAge.Views.ResultatPage"
              Title="ResultatPage">
     <VerticalStackLayout Padding="20" Spacing="16">
-        <Label x:Name="lblMessage" FontSize="22" />
+        <Label Text="{Binding Message}" FontSize="22" />
+        <Label Text="{Binding DaysUntilNextBirthday, StringFormat='Jours jusqu\'au prochain anniversaire : {0}'}" />
+        <Button Text="Effacer" Command="{Binding ClearCommand}" />
         <Button Text="Retour" Clicked="onRetourClicked" />
     </VerticalStackLayout>
 </ContentPage>
